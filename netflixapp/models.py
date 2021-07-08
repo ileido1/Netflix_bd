@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class Cuenta(models.Model):
@@ -156,5 +157,7 @@ class Premio(models.Model):
     contenido = models.ForeignKey(Contenido, on_delete=models.CASCADE)
     ano_ganadora = models.DateField( auto_now=False, auto_now_add=False)
 
-
-
+class CuentaForm(ModelForm):
+    class Meta:
+        model = Cuenta
+        fields = '__all__'
