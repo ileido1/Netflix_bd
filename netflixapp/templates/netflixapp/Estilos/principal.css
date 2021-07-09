@@ -1,0 +1,137 @@
+*{
+    background-color: black;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.boton{
+    color: #FFFFFF;
+    padding: 0.5rem;
+    background-color: #F40612;
+    border-radius: 0.3rem;   
+}
+
+
+ul{
+    float: left;
+    list-style: none;
+}
+
+#marca{
+    width: 15rem;
+    display: inline;
+    float: left;
+}
+
+section{
+    clear: both;
+}
+
+table{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+
+}
+
+table a.boton{
+    display: block;
+    margin-top: 0.1rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    display: flex;
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+li{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+}
+
+
+header{
+    display: inline;
+    width: 90%;
+    vertical-align: middle;
+}
+
+#sesion{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 3rem;
+}
+
+h2{
+    margin-top: 4rem;
+}
+
+td{
+    width: 10rem;
+    height: 2rem;
+}
+
+td:first-child{
+    width: 20rem;
+}
+
+#trending{
+    margin-top: 10rem;
+}
+
+
+
+/*    ESTILOS DE MATERIALIZE      */
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 60rem;
+    height: 200rem;
+}
+
+/*-----------------------------*/
+
+
+hr{
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    height: 5rem;
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+}
+
+.contacto{
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+}
+
+#precios{
+    display: flex;
+    align-items: center;
+}
