@@ -1,0 +1,91 @@
+*{
+    background-color: black;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding:0;
+}
+
+
+#marca{
+    width: 15rem;
+    display: inline;
+    float: left;
+    background: transparent;
+}
+
+
+.boton{
+    color: #FFFFFF;
+    padding: 0.5rem;
+    background-color: #F40612;
+    border-radius: 0.3rem;   
+}
+
+
+#registrarse{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+}
+
+
+section{
+    clear: both;
+}
+
+
+h1{
+    margin: 0;
+    text-align: center;
+    height: 30%;
+    background: transparent;
+    padding-bottom: 0.5em;
+    margin-bottom: 2em;
+    border-bottom: 0.1em solid ;
+}
+
+
+#contenedor{
+    min-width: 15em;
+    width: 20%;
+    margin: auto;
+    border-top: 0.2em solid #F40612;
+    border-radius: 0.2em;
+    background-color: #464646;
+    padding: 1em 2em; text-align: center;
+}
+
+
+#formulario{
+    width: 100%;
+    align-items: center;
+    background-color: #464646;
+    
+}
+
+
+.campo{
+    background: transparent;
+    width: 100%;
+    max-width: 90%;
+    border-bottom: 0.1em solid #F40612;
+    border-radius: 0.4em;
+    margin-bottom: 2em;
+    background: #252323;
+    padding: 1em 1em;
+    font-size: 1;
+    font-weight: bold;
+    color: silver;
+}
+
+
+#ingresar{
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    margin: 1em;
+    border: 0;
+}

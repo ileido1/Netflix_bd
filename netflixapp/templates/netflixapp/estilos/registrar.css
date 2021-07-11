@@ -1,0 +1,133 @@
+*{
+    background-color: black;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding:0;
+}
+
+
+#marca{
+    width: 15rem;
+    display: inline;
+    float: left;
+    background: transparent;
+}
+
+
+.boton{
+    color: #FFFFFF;
+    padding: 0.5rem;
+    background-color: #F40612;
+    border-radius: 0.3rem;   
+}
+
+
+#iniciar{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+}
+
+
+section{
+    clear: both;
+}
+
+
+h1{
+    margin: 0;
+    text-align: center;
+    height: 30%;
+    background: transparent;
+    padding-bottom: 0.5em;
+    margin-bottom: 2em;
+    border-bottom: 0.1em solid ;
+}
+
+
+#contenedor{
+    min-width: 15em;
+    width: 50%;
+    margin: auto;
+    border-top: 0.2em solid #F40612;
+    border-radius: 0.2em;
+    background-color: #464646;
+    padding: 1em 2em; 
+    text-align: center;
+}
+
+
+#formulario{
+    width: 100%;
+    align-items: center;
+    background-color: #464646;
+    
+}
+
+.izq{
+    margin-right: 5%;
+}
+
+.campo{
+    background: transparent;
+    width: 40%;
+    max-width: 90%;
+    border-bottom: 0.1em solid #F40612;
+    border-radius: 0.4em;
+    margin-bottom: 2em;
+    background: #252323;
+    padding: 1em 1em;
+    font-size: 1;
+    font-weight: bold;
+    color: silver;
+}
+
+
+#registrar{
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em;
+    border: transparent;
+}
+
+/* Quitar decoracion predefinida del input Number */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+/* ---------------------------------------------- */
+
+.lista{
+    width: 44%;
+}
+
+
+
+.tarjeta{
+    width: 25%;
+    margin-right: 3%;
+    margin-left: 7%;
+}
+
+#sexo{
+    width: 15%;
+}
+
+.campoTar{
+    margin-right: 1%;
+    width: 5%;
+}
+
+#cvv{
+    margin-right: 3%;
+}

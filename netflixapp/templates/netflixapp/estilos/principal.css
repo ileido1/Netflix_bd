@@ -1,0 +1,134 @@
+*{
+    background-color: black;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+.boton{
+    color: #FFFFFF;
+    padding: 0.5rem;
+    background-color: #F40612;
+    border-radius: 0.3rem;   
+}
+
+
+
+ul{
+    float: left;
+    list-style: none;
+}
+
+
+
+#marca{
+    width: 15rem;
+    display: inline;
+    float: left;
+    background: transparent;
+}
+
+
+
+section{
+    clear: both;
+}
+
+
+
+header{
+    display: inline;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+
+#sesion{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+}
+
+
+
+p{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+
+
+#descripcion{
+    background-image: url("../img/Netflix/207748-netflix-uhd.webp");
+    height: 42rem;
+    background-size: cover;
+    padding-bottom: 4rem;
+    text-shadow: 0.2rem 0.3rem 0.22rem black;
+}
+
+
+
+h1, #descrip{
+    background: transparent;
+    margin-top: 4rem;
+    clear: both;
+}
+
+
+
+#registrar{
+    padding: 1.5rem;
+    text-shadow: none;
+}
+
+
+
+#trending{
+    margin-top: 5rem;
+}
+
+
+
+#estrenos{
+    margin-top: 5rem;
+}
+
+
+/*    ESTILOS DE MATERIALIZE      */
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 60rem;
+    height: 200rem;
+}
+
+/*-----------------------------*/
+
+
+.separador{
+    background-color:#222222;
+    height: 0.5rem;
+    border: none;
+    width: 100%;
+    border-radius: 0.6rem;
+    margin-top: 3rem;
+}
+
+
+#fin{
+    
+    color: #464646;
+}
