@@ -1,14 +1,27 @@
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm,DateField
+from django import forms
 
 # Create your models here.
+class Pais(models.Model):
+    nombre= models.CharField(max_length=50)
+    descripción= models.CharField(max_length=50)
+    def __str__(self):
+        return self.nombre
+
+class Ciudad(models.Model):
+    nombre= models.CharField(max_length=50)
+    descripción= models.CharField(max_length=50)
+    pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.nombre
 class Cuenta(models.Model):
-    nombre_usuario = models.CharField(max_length=200)
-    email = models.EmailField(max_length=254)
+    nombre_usuario = models.CharField(max_length=200, unique=True)
+    email = models.EmailField(max_length=254, unique=True)
     contrasena = models.CharField( max_length=50)
     nombre = models.CharField( max_length=50)
     apellido= models.CharField( max_length=50)
-    fecha_nacimiento= models.DateField( auto_now=False, auto_now_add=False)
+    fecha_nacimiento= models.DateField("Fecha de nacimiento (dd/mm/yyyy)" ,auto_now=False, auto_now_add=False, )
     sexo_choices= [
     ('M', 'Masculino'),
     ('F', 'Femenino'),
@@ -19,8 +32,8 @@ class Cuenta(models.Model):
         choices=sexo_choices,
         default='M',
     )
-    telefono = models.IntegerField()
-    fecha_creacion = models.DateTimeField( auto_now=False, auto_now_add=False)
+    ciudad = models.ForeignKey(Ciudad, on_delete=models.CASCADE)
+    fecha_creacion = models.DateTimeField( auto_now=True, auto_now_add=False)
 
 class Perfil(models.Model):
     nombre = models.CharField( max_length=50)
@@ -30,23 +43,25 @@ class Membresia(models.Model):
    nombre_membresia= models.CharField(max_length=50)
    precio = models.IntegerField()
    cuentas = models.ManyToManyField(Cuenta, through='Subscripcion_cuenta')
+   def __str__(self):
+      return self.nombre_membresia
 
 class Subscripcion_cuenta(models.Model):
-    fecha_inicio= models.DateField(auto_now=True, primary_key=True)
+    fecha_inicio= models.DateField(auto_now=True)
     cuenta = models.ForeignKey(Cuenta, on_delete=models.CASCADE)
     membresia = models.ForeignKey(Membresia, on_delete=models.CASCADE)
     fecha_fin = models.DateField(auto_now=False, auto_now_add=False,null=True)
 
-class Tarjeta(models.Model):
-   ccv=models.IntegerField()
-   cuenta = models.ForeignKey(Cuenta, on_delete=models.CASCADE)
+class Tarjeta(models.Model): 
+   numerotarjeta= models.IntegerField(primary_key=True);
+   ccv=models.IntegerField(max_length=3)
    vencimiento=models.DateField( auto_now=False, auto_now_add=False)
         
 class Subscripcion(models.Model):
     cuenta = models.ForeignKey(Cuenta, on_delete=models.CASCADE)
     tarjeta = models.ForeignKey(Tarjeta, on_delete=models.CASCADE)
     membresia = models.ForeignKey(Membresia, on_delete=models.CASCADE)
-    fecha_pago= models.DateTimeField(auto_now=False, auto_now_add=False)
+    fecha_pago= models.DateTimeField(auto_now=True, auto_now_add=False)
     fin_servicio= models.DateTimeField( auto_now=False, auto_now_add=False)
     total = models.IntegerField()
 
@@ -93,14 +108,7 @@ class Dispositivo(models.Model):
 class Idioma(models.Model):
     nombre= models.CharField(max_length=50)
 
-class Pais(models.Model):
-    nombre= models.CharField(max_length=50)
-    descripción= models.CharField(max_length=50)
 
-class Ciudad(models.Model):
-    nombre= models.CharField(max_length=50)
-    descripción= models.CharField(max_length=50)
-    pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
 
 class Contenido(models.Model):
     titulo = models.CharField(max_length=50)
@@ -157,7 +165,5 @@ class Premio(models.Model):
     contenido = models.ForeignKey(Contenido, on_delete=models.CASCADE)
     ano_ganadora = models.DateField( auto_now=False, auto_now_add=False)
 
-class CuentaForm(ModelForm):
-    class Meta:
-        model = Cuenta
-        fields = '__all__'
+
+        

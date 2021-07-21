@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    <h1 class="centrar"> Listas de clientes activos </h1>
+      {% for susbcripcion in object_list %}
+      <li style="text-align:center">
+        Cliente: {{ susbcripcion.cuenta.nombre }} - 
+        Membresia actual: {{ susbcripcion.membresia.nombre_membresia }} -
+        Fin del servicio: {{ susbcripcion.fin_servicio }}
+      </li>
+      {% empty %}
+      <li>No hay susbcripciones.</li>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

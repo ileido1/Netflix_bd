@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% block content %} 
+<div class="container">
+
+
+
+  <div class="row">
+    <div class="col-12">
+    <h1>Nuevo perfil</h1>
+     <form  method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+     <div class="centrar" style="text-align: center;">
+          <input type="submit" class="btn btn-success"  value="Guardar">
+        </div>
+    <h1> Lista de perfiles activos </h1>
+    {% for perfiles in perfiles %}
+    <li>{{ perfiles.nombre }}</li>
+{% empty %}
+    <li>No hay perifles.</li>
+{% endfor %}
+    </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %} 
+
+
+
+
+

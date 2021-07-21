@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+
+{% block content %} 
+<div class="container">
+
+
+
+  <div class="row">
+    <div class="col-12">
+     <form  method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="centrar" style="text-align: center;">
+          <input type="submit" class="btn btn-success"  value="Guardar">
+        </div>
+        
+    </form>
+
+    </div>
+  </div>
+</div>
+ 
+
+
+
+
